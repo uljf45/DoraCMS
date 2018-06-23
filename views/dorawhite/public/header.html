@@ -23,7 +23,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-9 col-md-5" id="navWrapper">
+                    <div class="col-sm-9 col-md-8" id="navWrapper">
                         <div id="navScroller">
                             <ul>
                                 {% for cate in cateTypes %} {% if cate.parentId == '0' %}
@@ -34,16 +34,16 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-1 col-md-5">
+                    <!-- <div class="col-sm-1 col-md-5">
                         <div class="text-right topNav">
                             <div class="search-pannel">
-                                <div :class="['input-area',(@activeSearch? 'active':'')]">
+                                 <div :class="['input-area',(@activeSearch? 'active':'')]">
                                     <div class="el-input el-input--small">
                                         <input ms-on-keydown="@searchOpt" type="text" class="form-control" ms-duplex="@searchkey" placeholder="{{lk.lc_please_write_key}}">
                                     </div>
                                     <i ms-click='@searchMe' class="fa fa-search"></i>
                                 </div>
-                            </div>
+                            </div>  
                             <ul class="navbar-right">
                                 {% if logined == undefined %}
                                 <li>
@@ -75,7 +75,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

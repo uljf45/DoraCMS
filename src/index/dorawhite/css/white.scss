@@ -204,7 +204,7 @@ header {
             width: 100%;
         }
     }
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
 }
 
 .normal-text-ads {
@@ -276,7 +276,7 @@ header {
 .mainbody {
     margin-top: 62px;
     .main-container {
-        margin-top: 15px;
+        // margin-top: 15px;
         /*左右框架*/
         .left-frame {
             padding-right: 0px;
@@ -1624,7 +1624,7 @@ header {
         margin-top: 90px;
         width: 100% !important;
         .main-container {
-            margin-top: 4rem;
+            // margin-top: 4rem;
             .left-frame {
                 padding: 15px 0;
                 .slider-box {
@@ -1684,13 +1684,13 @@ header {
     }
 }
 
-@media screen and (max-width:992px) {
+@media screen and (min-width:992px) {
     .header-main {
-        width: 992px;
+        width: 100%;
         margin: 0 auto;
     }
     .mainbody {
-        width: 992px;
+        width: 100%;
         margin: 62px auto 0;
     }
     .topNav {
@@ -1698,13 +1698,15 @@ header {
     }
 }
 
-@media screen and (max-width:1920px) {
+
+
+@media screen and (min-width:1440px) {
     .header-main {
-        width: 1199px;
+        width: 1440px;
         margin: 0 auto;
     }
     .mainbody {
-        width: 1199px;
+        width: 1440px;
         margin: 62px auto 0;
     }
 }
