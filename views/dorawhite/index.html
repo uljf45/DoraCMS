@@ -6,7 +6,7 @@
                     <div class="col-md-12" style="padding: 0;">
                         {{adsPannel.slider(adsList,'SkepMEdibX')}}
                     </div>
-                    <div class="col-md-2 top-rec-contents">
+                    <div class="col-md-2 top-rec-contents" style="display: none;">
                         {% if reCommendListData.docs.length > 0 %} {% set currentRec = reCommendListData.docs.slice(0, 3) %} {% for item in currentRec
                         %}
                         <div class="rec-li">
@@ -24,10 +24,10 @@
         <div class="col-md-12 main-container">
             <div class="row">
                 <div class="col-md-12">
-                    {% include "./public/itemListTemp.html" %}
+                    {% include "./public/newsListTemp.html" %}
                 </div>
 
-                <div class="col-md-4 right-frame">
+                <div class="col-md-4 right-frame" style="display: none;">
                     {{adsPannel.slider(adsList,'sdfsd')}} {% include "./public/hotNewsList.html" %} {% include "./public/reCommendList.html"
                     %} {% include "./public/newMessageBoard.html" %}
                 </div>

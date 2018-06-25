@@ -70,6 +70,12 @@ let mainCtrl = {
         return await Content.getContents(req, res, next);
     },
 
+    async getNewsList () {
+        let newsList = await Content.getNewsContents()
+        console.log('-----newsList start-----',newsList,'--------newsList end--------------')
+        return newsList
+    },
+
     // 获取底部自社文档
     async getSysDocumentList(req, res, next) {
         req.query.isTop = 0;
@@ -200,6 +206,8 @@ let mainCtrl = {
                     pageData.adsList = await mainCtrl.getAdsList(req, res, next);
                 } else if (md.action == 'get_adminlogin_Info') {
                     pageData.pageType = 'adminlogin';
+                } else if (md.action == 'get_news_list') {
+                    pageData.newsList = await mainCtrl.getNewsList()
                 }
             }
 
@@ -258,6 +266,7 @@ let mainCtrl = {
             pageData.lk = await siteFunc.getSiteLocalKeys(res);
 
             // console.log('---defaultTemp----', defaultTemp.data.items);
+            console.log('-----pagedata', pageData)
             res.render(settings.SYSTEMTEMPFORDER + defaultTemp.data.alias + '/' + req.query.tempPage, pageData);
         } catch (error) {
             console.log('---error---', error);

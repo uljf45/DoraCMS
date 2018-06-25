@@ -486,6 +486,12 @@ class Content {
         }
     }
 
+
+    async getNewsContents() {
+        let cont = await ContentModel.find({ 'state': true, type: '1', categories: ['H1fHiDj-7'] });
+        return cont
+    }
+
 }
 
 module.exports = new Content();

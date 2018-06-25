@@ -12,11 +12,12 @@ let generalFun = {
         req.query.tempPage = 'index.html';
         req.query.modules = [
             { action: 'get_document_list', params: { current: req.query.current } },
+            { action: 'get_document_news_list' },
             { action: 'get_document_rec_list' },
             { action: 'get_document_hot_list' },
             { action: 'get_category_list' },
             { action: 'get_site_ads_list' },
-            { action: 'get_new_message_list' },
+            { action: 'get_news_list', params: { modal: 'simple' } },
             { action: 'get_site_info', params: { modal: 'simple' } }
         ];
         await mainCtrl.getPageData(req, res, next);
