@@ -70,8 +70,8 @@ let mainCtrl = {
         return await Content.getContents(req, res, next);
     },
 
-    async getNewsList () {
-        let newsList = await Content.getNewsContents()
+    async getNewsListLimit (amount) {
+        let newsList = await Content.getNewsContents(amount)
         console.log('-----newsList start-----',newsList,'--------newsList end--------------')
         return newsList
     },
@@ -207,7 +207,7 @@ let mainCtrl = {
                 } else if (md.action == 'get_adminlogin_Info') {
                     pageData.pageType = 'adminlogin';
                 } else if (md.action == 'get_news_list') {
-                    pageData.newsList = await mainCtrl.getNewsList()
+                    pageData.newsList = await mainCtrl.getNewsListLimit(15)
                 }
             }
 

@@ -487,8 +487,8 @@ class Content {
     }
 
 
-    async getNewsContents() {
-        let cont = await ContentModel.find({ 'state': true, type: '1', categories: ['H1fHiDj-7'] });
+    async getNewsContents(amount) {
+        let cont = await ContentModel.find({ 'state': true, type: '1', categories: ['H1fHiDj-7'] }).sort({"date": -1}).limit(amount);
         return cont
     }
 
