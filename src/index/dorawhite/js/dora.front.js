@@ -764,3 +764,22 @@ var userNavVm = avalon.define({
  * userAddContent avalon controller
  * 
  */
+
+
+
+
+
+ /**
+  * 
+  * newsListTemp
+  * 
+  */
+
+  $(function () {
+      $(".news-horizontal-list").owlCarousel({
+          items: 3,
+        //   nav: true, 
+          loop:true,
+          autoplay: 1000,
+      })
+  })
